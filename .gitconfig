@@ -1,0 +1,8 @@
+[user]
+	email = kuzovkov.aleksey3@wb.ru
+	name = kuzovkov.aleksey3
+	signingkey = D35B53790B4751A6
+[commit]
+	gpgsign = true
+[url "git@gitlab-private.wildberries.ru:"]
+	insteadof = https://gitlab-private.wildberries.ru/
