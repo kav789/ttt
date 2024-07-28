@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+if [ "$1" = "set" ]; then
+	C=$(cat)
+#	echo "Clipboard content to set: $C"
+	echo "$C" | /usr/bin/xclip -selection c
+	echo "$C" | /usr/bin/xclip -selection p
+	echo "$C" | /usr/bin/wl-copy
+elif [ "$1" = "get" ]; then
+#	/usr/bin/wl-paste -p
+	echo "$C" | /usr/bin/xclip -o -selection p
+fi
+
+
