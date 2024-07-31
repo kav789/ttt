@@ -1,6 +1,0 @@
-kubectl get secret replicator-dev-5 -o jsonpath='{.data}' | jq -r '.["replicator-dev-1.json"]' | base64 -d
-
-kubectl get secret replicator-dev-6 -o jsonpath='{.data}' | jq -r '.["replicator-dev-1.json"]' | base64 -d
-
-kubectl patch secret replicator-dev-5 -p="{\"data\":{\"replicator-dev-1.json\": \"$(cat dev5.json | base64 -w 0)\"}}" -v=1
-kubectl patch secret replicator-dev-6 -p="{\"data\":{\"replicator-dev-1.json\": \"$(cat dev6.json | base64 -w 0)\"}}" -v=1
